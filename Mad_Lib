@@ -1,0 +1,20 @@
+# Collecting inputs
+name = input("Enter the Name: ")
+education = input("Enter the Pass Out Education: ")
+status = input("Enter the Marital Status: ")
+programming_skill = input("Enter the Programming Language (Python, Next.js, TypeScript, CSS, HTML): ")
+institute = input("Enter the Institute Name: ")
+teacher_name = input("Enter the Mentor Name: ")
+
+# Mad Lib story
+story = f"""
+Once upon a time, there was a person named {name} who had recently completed their education in {education}.
+Being {status}, {name} decided to take their skills to the next level by learning {programming_skill}.
+They enrolled at {institute}, where they met their mentor, {teacher_name}, who was known for being the best {programming_skill} teacher in the region.
+Together, they worked on a groundbreaking project that amazed everyone.
+{name} realized that the combination of hard work, guidance, and {programming_skill} knowledge could truly change their life.
+"""
+
+# Printing the story
+print("\nHere is your Mad Lib story:\n")
+print(story)
