@@ -1,0 +1,42 @@
+def guess_game():
+    print("Welcome to the Even-Odd Number Guessing Game!")
+    print("Choose the type of game you want to play:")
+    print("1. Even Numbers")
+    print("2. Odd Numbers")
+
+    while True:
+        try:
+            choice = int(input("Enter your choice (1 for Even, 2 for Odd): "))
+            if choice not in [1, 2]:
+                print("Please choose either 1 or 2.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a number (1 or 2).")
+
+    if choice == 1:
+        print("You chose Even Numbers!")
+        number = random.randint(1, 50) * 2  # Generate random even number between 2 and 100
+    else:
+        print("You chose Odd Numbers!")
+        number = random.randint(0, 49) * 2 + 1  # Generate random odd number between 1 and 99
+
+    attempts = 0
+
+    while True:
+        try:
+            guess = int(input("Guess the number: "))
+            attempts += 1
+
+            if guess == number:
+                print(f"Congratulations! You guessed the number {number} correctly in {attempts} attempts.")
+                break
+            elif guess < number:
+                print("Too low. Try again!")
+            else:
+                print("Too high. Try again!")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+
+guess_game()
