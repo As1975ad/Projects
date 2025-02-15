@@ -1,0 +1,20 @@
+import time
+
+print(" Welcome to the Countdown Timer! ")
+
+def countdown(t):
+  while t:
+    # Calculate hours, minutes, and seconds remaining
+    hours, remainder = divmod(t, 3600)  # Get hours
+    mins, secs = divmod(remainder, 60)  # Get minutes and seconds from the remainder
+
+    timer = "{:02d}:{:02d}:{:02d}".format(hours, mins, secs)
+    print(timer, end="\r")
+    time.sleep(1)
+    t -= 1
+
+  print(" Time's up! ")
+
+# Get input time from the user
+t = int(input("Enter the countdown time in seconds: "))
+countdown(int(t))
