@@ -1,0 +1,25 @@
+user_choice = input("Please Enter Your Choice Between 1 To 100 :-  ")
+
+def computer_guess():
+    low = 1
+    high = 100
+    feedback = ''
+
+    print("Computer Try guess the number between 1 to 100.")
+
+    while feedback != 'c':  # when computer's guesses is not correct
+        guess = (low + high) // 2  # guess middle number
+        print(f"Is Your Choice {guess} ?")
+        feedback = input("Type l for low number, Typye h to high, Type c for correct my guesses: ").lower()
+
+        if feedback == 'h':  # if number is high
+            high = guess - 1
+        elif feedback == 'l':  # if number is low
+            low = guess + 1
+        elif feedback == 'c':  # if number is correct
+            print(f"{guess} is the correct number ! Win")
+        else:
+            print("Invalid input ! Please enter l, h or c")
+
+# Run the Game
+computer_guess()
