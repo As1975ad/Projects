@@ -1,0 +1,9 @@
+countdown = 10
+while countdown >=0:
+    print(f"{countdown}....")
+    countdown -=1
+    import time
+    time.sleep(1)
+
+
+print("Happy New Year")
